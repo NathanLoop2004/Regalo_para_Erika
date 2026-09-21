@@ -130,10 +130,66 @@ body {
   align-items: flex-end;
   justify-content: center;
   min-height: 100vh;
+  height: 100vh;
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
 }
+
+@media (max-width: 768px) {
+  body {
+    min-height: 100dvh;
+    height: 100dvh;
+  }
+
+  .flowers {
+    transform: scale(0.72) translateY(2vh);
+  }
+
+  .flower,
+  .grow-ans,
+  .growing-grass,
+  .flower__line,
+  .flower__leafs {
+    animation: none !important;
+  }
+
+  .flower {
+    bottom: 3vmin;
+    transform: rotate(0deg) !important;
+  }
+
+  .flower--2,
+  .flower--3 {
+    transform: rotate(0deg) !important;
+  }
+
+  .grow-ans {
+    transform: none !important;
+  }
+
+  .love-message,
+  .spring-message,
+  .start-screen {
+    width: 100%;
+    height: 100dvh;
+  }
+
+  .love-message {
+    font-size: 1.5em;
+    padding: 1.25rem;
+  }
+
+  .spring-message {
+    font-size: 2.1em;
+  }
+
+  .gift-btn {
+    font-size: 1.1em;
+    padding: 1em 1.5em;
+  }
+}
+
 .night {
   position: fixed;
   left: 50%;
